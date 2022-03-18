@@ -4,9 +4,12 @@ import { create } from "express-handlebars";
 import indexRoutes from "./routes/index.routes";
 import path from "path";
 import morgan from "morgan";
+import { PORT } from "./config";
 
 
 const app = express();
+
+app.set("port", PORT);
 
 app.set("views", path.join(__dirname, "views"));
 
