@@ -4,6 +4,6 @@ config();
 
 export const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/test";
 
-console.log("GEGEGEGGE", MONGODB_URI);
+console.log("Conectando...", MONGODB_URI);
 
 export const PORT = process.env.PORT || 3000;
