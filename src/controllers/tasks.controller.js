@@ -1,15 +1,16 @@
 import Task from "../models/Task";
 
 export const renderTasks = async (req, res) => {
-  try {
-    const tasks = await Task.find().lean();
-    res.render("index", {
-      tasks,
-    });
-  } catch (error) {
-    console.log({ error });
-    return res.render("error", { errorMessage: error.message });
-  }
+  // try {
+  //   const tasks = await Task.find().lean();
+  //   res.render("index", {
+  //     tasks,
+  //   });
+  // } catch (error) {
+  //   console.log({ error });
+  //   return res.render("error", { errorMessage: error.message });
+  // }
+  res.send("HOLA WEY")
 };
 
 export const createTask = async (req, res, next) => {
