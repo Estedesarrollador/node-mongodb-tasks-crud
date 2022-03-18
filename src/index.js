@@ -7,4 +7,6 @@ app.listen(PORT, () => {
   console.log(`Our app is running on port ${ PORT }`);
 });
 
+app.set("port", PORT);
+
 console.log("Server on port", PORT);
