@@ -15,6 +15,4 @@ router.get("/tasks/:id/delete", taskCtrl.deleteTask);
 
 router.get("/tasks/:id/toggleDone", taskCtrl.taskToggleDone);
 
-
-
 export default router;
