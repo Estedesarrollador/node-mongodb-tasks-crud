@@ -6,7 +6,7 @@ import {
   taskToggleDone,
   renderTaskEdit,
   editTask,
-} from "../controllers/tasks.controllers";
+} from "../controllers/tasks.controller";
 
 const router = Router();
 
