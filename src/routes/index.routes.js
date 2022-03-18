@@ -3,7 +3,7 @@ import * as taskCtrl from "../controllers/tasks.controller";
 
 const router = Router();
 
-router.get("/", taskCtrl.renderTasks)
+router.get("/", taskCtrl.renderTasks);
 
 // router.post("/tasks/add", taskCtrl.createTask);
 
