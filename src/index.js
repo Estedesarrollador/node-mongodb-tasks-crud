@@ -3,7 +3,7 @@ import "./database";
 import { PORT } from "./config";
 
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Our app is running on port ${ PORT }`);
 });
 
