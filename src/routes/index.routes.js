@@ -10,7 +10,7 @@ import {
 
 const router = Router();
 
-router.get("/", renderTasks)
+router.get("/app", renderTasks)
 
 router.post("/tasks/add", createTask);
 
