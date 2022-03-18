@@ -1,9 +1,9 @@
 import { Router } from "express";
-import * as taskCtrl from "../controllers/tasks.controller";
+import {renderTasks} from "../controllers/tasks.controller";
 
 const router = Router();
 
-router.get("/", taskCtrl.renderTasks);
+router.get("/", renderTasks);
 
 // router.post("/tasks/add", taskCtrl.createTask);
 
