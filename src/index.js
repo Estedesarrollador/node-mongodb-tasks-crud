@@ -1,10 +1,7 @@
 import app from "./app";
-import "./database";
-import { PORT } from "./config";
+import "./utils/mongoose";
 
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`Our app is running on port ${ PORT }`);
+app.listen(app.get("port"), () => {
+  console.log(`Our app is running on port ${ app.get("port") }`);
 });
-
-console.log("Server on port", PORT);

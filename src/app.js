@@ -1,15 +1,14 @@
-import express from "express";
-import exphbs from "express-handlebars";
-import { create } from "express-handlebars";
-import indexRoutes from "./routes/index.routes";
 import path from "path";
+import express from "express";
 import morgan from "morgan";
-import { PORT } from "./config";
+import { create } from "express-handlebars";
+
+import indexRoutes from "./routes/index.routes";
 
 
 const app = express();
 
-app.set("port", PORT);
+app.set("port", process.env.PORT || 3000);
 
 app.set("views", path.join(__dirname, "views"));
 
@@ -26,9 +25,11 @@ app.set("view engine", ".hbs");
 // Middelewares
 app.use(morgan("dev"));
 
+// routes
+app.use(indexRoutes);
+
 app.use(express.urlencoded({ extended: false }));
 
-app.use(indexRoutes);
 
 // static files
 app.use(express.static(path.join(__dirname, "public")));
